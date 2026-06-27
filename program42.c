@@ -1,0 +1,37 @@
+//Write a program which accepts n number from user and dispkay the count of odd digits
+
+#include <stdio.h>
+
+int CountEven(int iNo)
+{
+    int iDigit = 0;
+    int iCounter = 0;
+
+    while(iNo != 0)
+    {
+        iDigit = iNo%10;
+        if(iDigit%2!=0)
+        {
+            iCounter++;
+        }
+        iNo = iNo / 10;
+
+    }
+
+    return iCounter;
+}
+int main()
+{
+
+    int iValue = 0;
+    int iRet = 0;
+
+    printf("Enter a number : ");
+    scanf("%d",&iValue);
+
+    iRet = CountEven(iValue);
+
+    printf("The count of odd digits is : %d ",iRet);
+
+    return 0;
+}
